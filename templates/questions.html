@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Chatbot - Questions</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>University Chatbot</h1>
+        <p>Get answers to your university-related questions.</p>
+    </header>
+    <main>
+        <h1>Hello, {{ first_name }} {{ last_name }}!</h1>
+        <p>Please select a question you'd like to ask:</p>
+        <form action="/answers" method="post">
+            <input type="hidden" name="first_name" value="{{ first_name }}">
+            <input type="hidden" name="last_name" value="{{ last_name }}">
+            <input type="hidden" name="email" value="{{ email }}">
+
+            <label for="question">Select a question:</label>
+            <select id="question" name="question" required>
+                <option value="Does the college have a football team?">Does the college have a football team?</option>
+                <option value="Does it offer a Computer Science major?">Does it offer a Computer Science major?</option>
+                <option value="What is the in-state tuition?">What is the in-state tuition?</option>
+                <option value="Does the college provide on-campus housing?">Does the college provide on-campus housing?</option>
+            </select>
+
+            <button type="submit">Get Answer</button>
+        </form>
+    </main>
+    <footer>
+        <p>© 2024 Siddartha Reddy Chinthala | University Chatbot</p>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot Interaction Summary</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>University Chatbot</h1>
+        <p>Interaction Summary</p>
+    </header>
+    <main>
+        <h2>User Details</h2>
+        <p><strong>First Name:</strong> {{ first_name }}</p>
+        <p><strong>Last Name:</strong> {{ last_name }}</p>
+        <p><strong>Email:</strong> {{ email }}</p>
+
+        <h2>Your Question</h2>
+        <p>{{ question }}</p>
+
+        <h2>Answer</h2>
+        <p>{{ answer }}</p>
+
+        <h2>Chatbot Creator Details</h2>
+        <p><strong>First Name:</strong> {{ creator_first_name }}</p>
+        <p><strong>Last Name:</strong> {{ creator_last_name }}</p>
+        <p><strong>Email:</strong> {{ creator_email }}</p>
+    </main>
+    <footer>
+        <p>© 2024 Siddartha Reddy Chinthala | University Chatbot</p>
+    </footer>
+</body>
+</html>
+
